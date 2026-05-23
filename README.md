@@ -18,7 +18,7 @@ Micro-SaaS founders and small B2B SaaS operators who want to assemble technical 
 
 ## What this is not
 
-This is not legal advice, tax advice, M&A advice, valuation advice, brokerage, security certification, compliance readiness, or a promise of sale/fundraising outcome.
+This is not legal advice, not tax advice, not M&A advice, not valuation advice, not brokerage, not security certification, not compliance readiness, and not a promise of sale/fundraising outcome.
 
 ## Validation question
 
