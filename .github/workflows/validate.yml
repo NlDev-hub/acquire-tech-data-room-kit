@@ -24,7 +24,7 @@ jobs:
           python-version: '3.x'
 
       - name: Run public safety tests
-        run: python3 -m unittest tests/test_public_package.py -v
+        run: python3 -m unittest tests/test_public_package.py tests/test_ci_workflow.py tests/test_public_landing_page.py -v
 
       - name: Run public package validator
         run: python3 scripts/validate_public_package.py
