@@ -1,0 +1,33 @@
+name: Validate public package
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Run public safety tests
+        run: python3 -m unittest tests/test_public_package.py -v
+
+      - name: Run public package validator
+        run: python3 scripts/validate_public_package.py
+
+      - name: Compile validator and tests
+        run: python3 -m py_compile scripts/validate_public_package.py tests/test_public_package.py
